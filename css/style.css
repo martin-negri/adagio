@@ -5,15 +5,18 @@
     box-sizing: border-box;
 }
 
+.hero{
+    height: 100vh;
+    background-image: url(../img/fondo1.png);
+}
+
 header{
     display: flex;
     align-items: center;
     justify-content: space-around;
     font-family: "DM Serif Text", serif;
     padding: 1rem;
-    margin-top: 1rem;
     background-color: transparent;
-    border-top: solid .3px #0e0d0d11;
 }
 
 .nav-list {
@@ -24,7 +27,14 @@ header{
 
 .nav-list li a{
     text-decoration: none;
-    color: #2524248e;
+    color: #ffffff8e;
+    transition: color 0.2s, border-bottom 0.1s;
+
+}
+
+.nav-list li a:hover {
+    color: #ffffff; /* se pone blanco completo */
+    border-bottom: 2px solid #ffffff; /* subrayado elegante */
 }
 
 .abrir-menu,
@@ -32,6 +42,42 @@ header{
     display: none;
 }
 
+.hero-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    height: 60vh;
+    font-family: "DM Serif Text", serif;
+    color: aliceblue;
+    font-size: 2.9rem;           
+}
+
+.hero-sub {
+    display: flex;
+    gap: 1rem; 
+    align-items: center; 
+    
+}
+
+.hero-sub p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.hero-btn {
+    background: #0076b688;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #023d8ab6;
+}
 
 
 @media screen and (max-width: 550px) {
@@ -73,9 +119,9 @@ header{
         right: 0;
         bottom: 0;
         padding: 2rem 5rem;
-        background-color: rgba(7, 88, 134, 0.712);
+        background-color: rgba(11, 125, 190, 0.856);
         backdrop-filter: blur(6px);
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 1, 0.295);
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 1, 0.171);
     }
 
     .nav.visible{
